@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czy zostaniesz moją dziewczyną?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="step1" class="step active">
+            <h1>Hej Kochanie 💖</h1>
+            <p>Przygotowałem coś specjalnego...</p>
+            <button onclick="nextStep()">Zobacz</button>
+        </div>
+
+        <div id="step2" class="step">
+            <h1>Wiesz, że jesteś dla mnie bardzo ważna?</h1>
+            <p>Chciałbym zrobić coś oficjalnego...</p>
+            <button onclick="nextStep()">Dalej</button>
+        </div>
+
+        <div id="step3" class="step">
+            <h1>Czy zostaniesz moją dziewczyną? 💍</h1>
+            <div class="buttons">
+                <button onclick="accept()">Tak! 💕</button>
+                <button id="no-button">Nie 😜</button>
+            </div>
+        </div>
+
+        <div id="final" class="step">
+            <h1>Yay! ❤️</h1>
+            <p>Najlepsza decyzja na świecie!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
