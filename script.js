@@ -7,7 +7,7 @@ function nextStep() {
 }
 
 function accept() {
-    document.getElementById('step3').classList.remove('active');
+    document.getElementById('step5').classList.remove('active');
     document.getElementById('final').classList.add('active');
 }
 
