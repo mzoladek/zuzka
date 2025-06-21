@@ -1,3 +1,4 @@
+// script.js
 let currentStep = 1;
 
 function nextStep() {
@@ -20,7 +21,7 @@ noButton.addEventListener('mouseover', () => {
     noButton.style.left = `${Math.random() * 80 + 10}%`;
 });
 
-// Latające serduszka
+// Latające serduszka (wolniejsze)
 setInterval(() => {
     const heart = document.createElement('div');
     heart.textContent = '💖';
@@ -28,10 +29,10 @@ setInterval(() => {
     document.getElementById('hearts').appendChild(heart);
 
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = 2 + Math.random() * 3 + "s";
+    heart.style.animationDuration = 5 + Math.random() * 5 + "s"; // wolniejsze
 
-    setTimeout(() => heart.remove(), 5000);
-}, 500);
+    setTimeout(() => heart.remove(), 10000);
+}, 800);
 
 // Spadające płatki wiśni (serduszka)
 const petalsContainer = document.getElementById('petals');
@@ -40,10 +41,10 @@ function createPetal() {
     const petal = document.createElement('div');
     petal.classList.add('petal');
     petal.style.left = Math.random() * 100 + 'vw';
-    petal.style.animationDuration = (5 + Math.random() * 5) + 's';
+    petal.style.animationDuration = (6 + Math.random() * 6) + 's';
     petal.style.opacity = Math.random();
     petalsContainer.appendChild(petal);
-    setTimeout(() => petal.remove(), 10000);
+    setTimeout(() => petal.remove(), 12000);
 }
 
 setInterval(createPetal, 300);
