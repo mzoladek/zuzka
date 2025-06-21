@@ -21,7 +21,7 @@ noButton.addEventListener('mouseover', () => {
     noButton.style.left = `${Math.random() * 80 + 10}%`;
 });
 
-// Usunięto latające czerwone serduszka
+// Latające serduszka usunięte (pozostają tylko czarne serca jako płatki)
 
 // Spadające płatki wiśni (czarne serduszka)
 const petalsContainer = document.getElementById('petals');
