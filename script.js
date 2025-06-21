@@ -21,20 +21,9 @@ noButton.addEventListener('mouseover', () => {
     noButton.style.left = `${Math.random() * 80 + 10}%`;
 });
 
-// Latające serduszka (wolniejsze)
-setInterval(() => {
-    const heart = document.createElement('div');
-    heart.textContent = '💖';
-    heart.className = 'floating-heart';
-    document.getElementById('hearts').appendChild(heart);
+// Usunięto latające czerwone serduszka
 
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = 5 + Math.random() * 5 + "s"; // wolniejsze
-
-    setTimeout(() => heart.remove(), 10000);
-}, 800);
-
-// Spadające płatki wiśni (serduszka)
+// Spadające płatki wiśni (czarne serduszka)
 const petalsContainer = document.getElementById('petals');
 
 function createPetal() {
