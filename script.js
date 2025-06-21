@@ -1,3 +1,4 @@
+// script.js
 let currentStep = 1;
 
 function nextStep() {
@@ -19,3 +20,16 @@ noButton.addEventListener('mouseover', () => {
     noButton.style.top = `${Math.random() * 80 + 10}%`;
     noButton.style.left = `${Math.random() * 80 + 10}%`;
 });
+
+// Latające serduszka
+setInterval(() => {
+    const heart = document.createElement('div');
+    heart.textContent = '💖';
+    heart.className = 'floating-heart';
+    document.getElementById('hearts').appendChild(heart);
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = 2 + Math.random() * 3 + "s";
+
+    setTimeout(() => heart.remove(), 5000);
+}, 500);
